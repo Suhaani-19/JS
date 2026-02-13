@@ -1,7 +1,18 @@
-//prisma import
-async function createUser(){
-    const data=prisma.user.create({
-        data: data
-    })
+// prisma import
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
+
+// create user service
+async function createUser(userData) {
+    try {
+        const data = await prisma.user.create({
+            data: userData
+        });
+        return data;
+    } catch (error) {
+        console.error("Error creating user:", error);
+        throw error;
+    }
 }
-module.exports={createUser}
+
+module.exports = { createUser };
