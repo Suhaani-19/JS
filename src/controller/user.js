@@ -2,10 +2,8 @@ const { createUser } = require("../services/user.js");
 
 async function handleUserCollection(req, res) {
   try {
-    // get data from request body
     const userData = req.body;
 
-    // create user
     const user = await createUser(userData);
 
     res.status(201).json({
