@@ -3,10 +3,9 @@ const router = express.Router();
 
 const { handleUserCollection } = require("../controller/user.js");
 
-// Create user
+
 router.post("/create", handleUserCollection);
 
-// Get all users
 router.get("/", (req, res) => {
   res.send("Get all users");
 });
