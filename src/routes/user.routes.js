@@ -10,12 +10,10 @@ router.get("/", (req, res) => {
   res.send("Get all users");
 });
 
-// Update user
 router.put("/update/:id", (req, res) => {
   res.send(`Update user with id ${req.params.id}`);
 });
 
-// Delete user
 router.delete("/delete/:id", (req, res) => {
   res.send(`Delete user with id ${req.params.id}`);
 });
