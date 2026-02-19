@@ -1,18 +1,31 @@
-
+// Import PrismaClient from the Prisma package
 const { PrismaClient } = require('@prisma/client');
+
+// Create a new Prisma client instance to interact with the database
 const prisma = new PrismaClient();
 
-
+/**
+ * Creates a new user in the database
+ * @param {Object} userData - The user data to be stored (must match Prisma User model)
+ * @returns {Promise<Object>} - The created user record
+ */
 async function createUser(userData) {
     try {
+        // Create a new user entry in the database
         const data = await prisma.user.create({
             data: userData
         });
+
+        // Return the created user data
         return data;
     } catch (error) {
+        // Log error for debugging purposes
         console.error("Error creating user:", error);
+
+        // Re-throw the error so the calling function can handle it
         throw error;
     }
 }
 
+// Export the function so it can be used in other files
 module.exports = { createUser };
