@@ -27,7 +27,6 @@ async function createUser(userData) {
     }
 }
 
-// Export the function so it can be used in other files
 
 
 module.exports = { createUser };
