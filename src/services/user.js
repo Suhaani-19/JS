@@ -18,10 +18,8 @@ async function createUser(userData) {
         // Return the created user data
         return data;
     } catch (error) {
-        // Log error for debugging purposes
         console.error("Error creating user:", error);
 
-        // Re-throw the error so the calling function can handle it
         throw error;
     }
 }
