@@ -4,7 +4,7 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 /**
- * Creates a new user in the database
+ 
  * @param {Object} userData - The user data to be stored (must match Prisma User model)
  * @returns {Promise<Object>} - The created user record
  */
