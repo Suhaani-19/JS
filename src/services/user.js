@@ -1,6 +1,5 @@
 const { PrismaClient } = require('@prisma/client');
 
-// Create a new Prisma client instance to interact with the database
 const prisma = new PrismaClient();
 
 /**
