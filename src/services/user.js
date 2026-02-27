@@ -4,7 +4,7 @@ const prisma = new PrismaClient();
 
 /**
  
- * @param {Object} userData - The user data to be stored (must match Prisma User model)
+ * @param {Object} userData model)
  * @returns {Promise<Object>} - The created user record
  */
 async function createUser(userData) {
