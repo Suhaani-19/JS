@@ -14,7 +14,6 @@ async function createUser(userData) {
             data: userData
         });
 
-        // Return the created user data
         return data;
     } catch (error) {
         console.error("Error creating user:", error);
