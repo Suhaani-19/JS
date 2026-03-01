@@ -9,7 +9,6 @@ const prisma = new PrismaClient();
  */
 async function createUser(userData) {
     try {
-        // Create a new user entry in the database
         const data = await prisma.user.create({
             data: userData
         });
