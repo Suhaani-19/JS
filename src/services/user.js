@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 /**
  
  * @param {Object} userData model)
- * @returns {Promise<Object>} - The created user record
+ * @returns {Promise<Object>} - 
  */
 async function createUser(userData) {
     try {
