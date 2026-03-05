@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-router.use(express.json());   // allows reading JSON body from requests
+router.use(express.json());   
 
 const { handleUserCollection } = require("../controller/user.js");
 
