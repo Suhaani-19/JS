@@ -19,5 +19,5 @@ router.put("/update/:id", (req, res) => {
 router.delete("/delete/:id", (req, res) => {
   res.send(`Delete user with id ${req.params.id}`);
 });
-
+// exports
 module.exports = router;
