@@ -5,7 +5,6 @@ router.use(express.json());
 
 const { handleUserCollection } = require("../controller/user.js");
 
-
 router.post("/create", handleUserCollection);
 
 router.get("/", (req, res) => {
