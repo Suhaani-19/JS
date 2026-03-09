@@ -11,6 +11,7 @@ router.get("/", (req, res) => {
   res.send("Get all users");
 });
 
+
 router.put("/update/:id", (req, res) => {
   res.send(`Update user with id ${req.params.id}`);
 });
