@@ -1,5 +1,6 @@
 const { createUser } = require("../services/user.js");
 
+
 async function handleUserCollection(req, res) {
   try {
     const userData = req.body;
