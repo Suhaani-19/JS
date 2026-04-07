@@ -21,7 +21,7 @@ async function handleUserCollection(req, res) {
   } catch (error) {
     console.error("Create User Error:", error);
 
-    // 🔥 Duplicate email error (Mongo)
+
     if (error.code === 11000) {
       return res.status(409).json({
         message: "Email already exists",
