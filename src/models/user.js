@@ -67,8 +67,6 @@ userSchema.methods.toJSON = function() {
     delete obj.password; // remove password field
     return obj;
 };
-
-// 🔄 Static method: Login logic (find user + verify password)
 userSchema.statics.findByCredentials = async function(email, password) {
 
     // Find user and explicitly include password
