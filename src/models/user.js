@@ -64,7 +64,7 @@ userSchema.methods.comparePassword = async function(candidatePassword) {
 // 🔐 Remove sensitive data when converting to JSON (e.g., sending response)
 userSchema.methods.toJSON = function() {
     const obj = this.toObject();
-    delete obj.password; // remove password field
+    delete obj.password; 
     return obj;
 };
 userSchema.statics.findByCredentials = async function(email, password) {
