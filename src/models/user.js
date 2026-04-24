@@ -61,7 +61,6 @@ userSchema.methods.comparePassword = async function(candidatePassword) {
     return bcrypt.compare(candidatePassword, this.password);
 };
 
-// 🔐 Remove sensitive data when converting to JSON (e.g., sending response)
 userSchema.methods.toJSON = function() {
     const obj = this.toObject();
     delete obj.password; 
