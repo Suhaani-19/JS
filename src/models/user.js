@@ -56,7 +56,6 @@ userSchema.pre('save', async function(next) {
     }
 });
 
-// 🔐 Instance method: Compare entered password with stored hash
 userSchema.methods.comparePassword = async function(candidatePassword) {
     return bcrypt.compare(candidatePassword, this.password);
 };
