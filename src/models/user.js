@@ -5,7 +5,6 @@ const bcrypt = require('bcryptjs');
 
 const SALT_ROUNDS = 12;
 
-// Define the user schema
 const userSchema = new mongoose.Schema(
 {
     // User's name
