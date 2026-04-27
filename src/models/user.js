@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
-// Number of salt rounds for hashing (higher = more secure but slower)
+
 const SALT_ROUNDS = 12;
 
 // Define the user schema
