@@ -1,3 +1,7 @@
-javascript
 node
+npm
 react
+express
+cors
+dotenv
+axios
