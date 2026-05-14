@@ -76,7 +76,6 @@ app.use((req, res) => {
     message: "❌ Route not found",
   });
 });
-
 // ===============================
 // Global Error Handler
 // ===============================
