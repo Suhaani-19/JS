@@ -38,7 +38,6 @@ app.get("/api/example", (req, res) => {
     },
   });
 });
-
 // Example POST API
 app.post("/api/data", (req, res) => {
   try {
