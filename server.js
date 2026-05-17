@@ -3,7 +3,6 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-
 // ===============================
 // Middleware
 // ===============================
@@ -26,7 +25,6 @@ app.get("/", (req, res) => {
     message: "🚀 Server is running successfully!",
   });
 });
-
 // Example GET API
 app.get("/api/example", (req, res) => {
   res.status(200).json({
