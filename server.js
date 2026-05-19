@@ -16,7 +16,6 @@ const PORT = process.env.PORT || 5000;
 // ===============================
 // Routes
 // ===============================
-
 // Health Check Route
 app.get("/", (req, res) => {
   res.status(200).json({
