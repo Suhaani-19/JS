@@ -57,9 +57,7 @@ app.post("/api/data", (req, res) => {
     });
   }
 });
-// ===============================
-// 404 Route Handler
-// ===============================
+
 app.use((req, res) => {
   res.status(404).json({
     success: false,
