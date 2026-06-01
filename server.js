@@ -74,7 +74,6 @@ app.use((err, req, res, next) => {
     message: "Something went wrong!",
   });
 });
-
 app.listen(PORT, () => {
   console.log(`
 =================================
