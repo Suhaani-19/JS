@@ -1,24 +1,44 @@
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
+
 const app = express();
 
-app.use(cors());
-app.use(express.json());
 // ===============================
-// Config
+// Configuration
 // ===============================
 const PORT = process.env.PORT || 5000;
+
+// ===============================
+// Middleware
+// ===============================
+app.use(cors());
+
+app.use(
+  express.json({
+    limit: "10mb",
+  })
+);
+
+// Request Logger
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.url}`);
+  next();
+});
+
 // ===============================
 // Routes
 // ===============================
-// Health Check Route
+
+// Health Check
 app.get("/", (req, res) => {
   res.status(200).json({
     success: true,
     message: "🚀 Server is running successfully!",
+    timestamp: new Date().toISOString(),
   });
 });
+
 // Example GET API
 app.get("/api/example", (req, res) => {
   res.status(200).json({
@@ -30,12 +50,12 @@ app.get("/api/example", (req, res) => {
     },
   });
 });
+
 // Example POST API
 app.post("/api/data", (req, res) => {
   try {
     const data = req.body;
 
-    // Validation
     if (!data || Object.keys(data).length === 0) {
       return res.status(400).json({
         success: false,
@@ -48,8 +68,9 @@ app.post("/api/data", (req, res) => {
       message: "✅ Data received successfully",
       receivedData: data,
     });
-
   } catch (error) {
+    console.error("POST /api/data Error:", error);
+
     res.status(500).json({
       success: false,
       message: "Internal Server Error",
@@ -57,29 +78,38 @@ app.post("/api/data", (req, res) => {
     });
   }
 });
-app.use((req, res) => {
+
+// ===============================
+// 404 Handler
+// ===============================
+app.use("*", (req, res) => {
   res.status(404).json({
     success: false,
-    message: "❌ Route not found",
+    message: `Route ${req.originalUrl} not found`,
   });
 });
+
 // ===============================
 // Global Error Handler
 // ===============================
 app.use((err, req, res, next) => {
-  console.error(err.stack);
+  console.error("Global Error:", err);
 
-  res.status(500).json({
+  res.status(err.statusCode || 500).json({
     success: false,
-    message: "Something went wrong!",
+    message: err.message || "Something went wrong!",
   });
 });
+
+// ===============================
+// Server Start
+// ===============================
 app.listen(PORT, () => {
   console.log(`
 =================================
-🚀 Server running successfully
+🚀 Server Running Successfully
 🌐 URL: http://localhost:${PORT}
 📦 Environment: ${process.env.NODE_ENV || "development"}
 =================================
-  `);
+`);
 });
