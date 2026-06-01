@@ -3,7 +3,9 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
+const logger = require("./middleware/logger");
 
+app.use(logger);
 // ===============================
 // Configuration
 // ===============================
