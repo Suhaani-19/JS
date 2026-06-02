@@ -102,7 +102,6 @@ app.use((err, req, res, next) => {
     message: err.message || "Something went wrong!",
   });
 });
-
 // ===============================
 // Server Start
 // ===============================
