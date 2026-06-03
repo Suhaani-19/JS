@@ -23,7 +23,6 @@ const logger = (req, res, next) => {
     } else {
       statusColor = "\x1b[32m"; // Green
     }
-
     console.log(
       `[${timestamp}] ${method} ${url} | ` +
       `${statusColor}${status}\x1b[0m | ` +
