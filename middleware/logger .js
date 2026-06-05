@@ -1,6 +1,5 @@
 const logger = (req, res, next) => {
   const start = process.hrtime.bigint();
-
   res.on("finish", () => {
     const duration =
       Number(process.hrtime.bigint() - start) / 1_000_000;
