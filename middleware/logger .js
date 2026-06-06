@@ -3,7 +3,6 @@ const logger = (req, res, next) => {
   res.on("finish", () => {
     const duration =
       Number(process.hrtime.bigint() - start) / 1_000_000;
-
     const timestamp = new Date().toISOString();
     const method = req.method;
     const url = req.originalUrl;
