@@ -6,7 +6,7 @@ const SALT_ROUNDS = 12;
 
 const userSchema = new mongoose.Schema(
 {
-    
+
     name: {
         type: String,
         required: true,        // must be provided
