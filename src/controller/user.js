@@ -41,6 +41,7 @@ async function handleUserCollection(req, res) {
   }
 }
 
+
 module.exports = {
   handleUserCollection,
 };
