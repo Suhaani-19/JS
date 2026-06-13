@@ -17,8 +17,8 @@ const userSchema = new mongoose.Schema(
     email: {
         type: String,
         required: true,
-        unique: true,          // no duplicate emails allowed
-        lowercase: true,       // converts email to lowercase
+        unique: true,          
+        lowercase: true,       
         trim: true,
         match: [/^\S+@\S+\.\S+$/, 'Please use a valid email address'], // regex validation
         index: true            // improves query performance
