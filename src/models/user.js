@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema(
     name: {
         type: String,
         required: true,        
-        trim: true,            // removes extra spaces
+        trim: true,           
         minlength: 2,
         maxlength: 50
     },
@@ -22,7 +22,7 @@ const userSchema = new mongoose.Schema(
         lowercase: true,       
         trim: true,
         match: [/^\S+@\S+\.\S+$/, 'Please use a valid email address'], // regex validation
-        index: true            // improves query performance
+        index: true            
     },
 
     // User's password
@@ -34,7 +34,7 @@ const userSchema = new mongoose.Schema(
     }
 },
 { 
-    timestamps: true          // adds createdAt and updatedAt automatically
+    timestamps: true         
 }
 );
 
