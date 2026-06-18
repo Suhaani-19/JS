@@ -25,12 +25,12 @@ const userSchema = new mongoose.Schema(
         index: true            
     },
 
-    // User's password
+
     password: {
         type: String,
         required: true,
         minlength: 6,
-        select: false          // excludes password from queries by default
+        select: false          
     }
 },
 { 
