@@ -69,7 +69,7 @@ userSchema.statics.findByCredentials = async function(email, password) {
 
     if (!user) throw new Error('Invalid email or password');
 
-    // Compare entered password with stored hash
+
     const isMatch = await user.comparePassword(password);
 
     if (!isMatch) throw new Error('Invalid email or password');
