@@ -38,7 +38,6 @@ const userSchema = new mongoose.Schema(
 }
 );
 
-// 🔐 Middleware: Hash password before saving user
 userSchema.pre('save', async function(next) {
     try {
         // Only hash if password is newly created or modified
