@@ -61,7 +61,6 @@ userSchema.methods.toJSON = function() {
 };
 userSchema.statics.findByCredentials = async function(email, password) {
 
-    // Find user and explicitly include password
     const user = await this.findOne({ email }).select('+password');
 
     if (!user) throw new Error('Invalid email or password');
