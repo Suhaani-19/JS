@@ -6,9 +6,7 @@ const app = express();
 const logger = require("./middleware/logger");
 
 app.use(logger);
-// ===============================
-// Configuration
-// ===============================
+
 const PORT = process.env.PORT || 5000;
 
 // ===============================
