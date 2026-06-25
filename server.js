@@ -24,11 +24,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// ===============================
-// Routes
-// ===============================
-
-// Health Check
+/
 app.get("/", (req, res) => {
   res.status(200).json({
     success: true,
