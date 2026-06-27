@@ -19,7 +19,7 @@ const logger = (req, res, next) => {
     } else if (status >= 300) {
       statusColor = "\x1b[36m"; // Cyan
     } else {
-      statusColor = "\x1b[32m"; // Green
+      statusColor = "\x1b[32m"; 
     }
     console.log(
       `[${timestamp}] ${method} ${url} | ` +
