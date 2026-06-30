@@ -15,7 +15,7 @@ const logger = (req, res, next) => {
     if (status >= 500) {
       statusColor = "\x1b[31m"; 
     } else if (status >= 400) {
-      statusColor = "\x1b[33m"; // Yellow
+      statusColor = "\x1b[33m"; 
     } else if (status >= 300) {
       statusColor = "\x1b[36m"; 
     } else {
