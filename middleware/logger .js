@@ -12,7 +12,7 @@ const logger = (req, res, next) => {
     const userAgent = req.get("User-Agent") || "Unknown";
 
     let statusColor;
-
+// loop
     if (status >= 500) {
       statusColor = "\x1b[31m"; 
     } else if (status >= 400) {
