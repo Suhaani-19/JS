@@ -10,7 +10,7 @@ const logger = (req, res, next) => {
     const status = res.statusCode;
     const ip = req.ip || req.connection.remoteAddress;
     const userAgent = req.get("User-Agent") || "Unknown";
-
+// variable
     let statusColor;
 // loop
     if (status >= 500) {
