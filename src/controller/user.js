@@ -4,7 +4,6 @@ async function handleUserCollection(req, res) {
   try {
     const { name, email, password } = req.body;
 
-    // Validate required fields
     if (!name?.trim() || !email?.trim() || !password?.trim()) {
       return res.status(400).json({
         success: false,
