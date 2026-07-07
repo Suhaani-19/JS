@@ -25,7 +25,7 @@ async function handleUserCollection(req, res) {
   } catch (error) {
     console.error("[USER_CREATE_ERROR]", error);
 
-    // Handle duplicate email
+    
     if (error.code === 11000) {
       return res.status(409).json({
         success: false,
