@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-
+// router
 router.use(express.json());   
 const { handleUserCollection } = require("../controller/user.js");
 
