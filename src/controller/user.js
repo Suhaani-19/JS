@@ -1,5 +1,5 @@
 const { createUser } = require("../services/user");
-
+// async await
 async function handleUserCollection(req, res) {
   try {
     const { name, email, password } = req.body;
