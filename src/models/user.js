@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 // mongo db
 const SALT_ROUNDS = 12
-
+// bycrpt
 const userSchema = new mongoose.Schema(
 {
 
